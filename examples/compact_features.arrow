@@ -1,0 +1,14 @@
+↑↑ sum(data):
+    ↑↑↑ result = 0
+    ↓↓ number ∈ data:
+        ↑↑↑ result = result + number
+    →→→ result
+
+↑↑↑ numbers = [2, 4, 6, 8]
+↑ "Sum:"
+↑ sum(numbers)
+
+↑↑↑ x = 0
+↓ x < 3:
+    ↑ x
+    ↑↑↑ x = x + 1
