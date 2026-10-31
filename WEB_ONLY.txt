@@ -1,0 +1,1 @@
+ArrowLang Web Edition only. No desktop IDE, Tkinter application, Windows EXE build files, or desktop runtime are included.

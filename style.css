@@ -1,0 +1,169 @@
+* {
+ box-sizing:   border-box;
+}
+
+body {
+  margin:   0px;
+  min-width: 320px;
+  min-height:   100vh;
+  padding: 20px;
+  background: lightgrey;
+  background-color: lightgrey;
+  color: #222;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: lightgrey;
+}
+
+.ide {
+ width:min(1100px,100%);
+  margin:0 auto;
+}
+
+.toolbar {
+  display: flex;
+  gap:   8px;
+  flex-wrap:wrap;
+  margin-bottom: 14px;
+}
+
+.toolbar button {
+  min-width: 76px;
+  padding:  8px   14px;
+  border: 1px solid #888;
+  border-radius: 3px;
+  background: #f4f4f4;
+  color: #222;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+  min-width:76px;
+}
+
+.toolbar button:hover:not(:disabled) {
+  background: #e5e5e5;
+}
+
+.toolbar button:focus-visible {
+  outline: 2px solid #333;
+  outline-offset: 2px;
+}
+
+.toolbar button:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+.editor-section label {
+  display: block;
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.editor-wrap {
+  display: grid;
+  grid-template-columns:   42px minmax(0, 1fr);
+  min-height: 70vh;
+  border: 1px solid #888;
+  background: white;
+  background-color: #fff;
+  border-color:   #888;
+}
+
+.line-numbers {
+  margin: 0;
+  padding: 12px 9px;
+  overflow: hidden;
+  border-right: 1px solid #ddd;
+  background: #f1f1f1;
+  color: #777;
+  text-align: right;
+  user-select: none;
+  white-space: pre;
+  font: 13px/1.6 Consolas, "Courier New", monospace;
+  padding-right:   9px;
+}
+
+#code-editor {
+  display: block;
+  width: 100%;
+  min-height: 70vh;
+  padding: 12px;
+  resize: vertical;
+  border: 0;
+  outline: 0;
+  background: #fff;
+  color: #222;
+  tab-size: 4;
+  white-space: pre;
+  overflow: auto;
+  font: 13px/1.6 Consolas, "Courier New", monospace;
+  font-size: 13px;
+  color:   #222;
+}
+
+#code-editor::selection {
+  background: #c8dcff;
+}
+
+.output {
+  max-height: 180px;
+  margin: 10px 0 0;
+  padding: 9px 11px;
+  overflow: auto;
+  border: 1px solid #aaa;
+  background: #fff;
+  color: #222;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font: 12px/1.5 Consolas, "Courier New", monospace;
+  border-radius:   0px;
+  background-color: white;
+}
+
+.game-section {
+  margin-top:   14px;
+  text-align: center;
+}
+
+.game-section canvas {
+  display: block;
+  width: min(600px, 100%);
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid #777;
+  background: #101820;
+  image-rendering: pixelated;
+  background-color:   #101820;
+}
+
+.game-section p {
+  margin: 6px 0 0;
+  color: #444;
+  font-size: 12px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+    padding-left:   10px;
+  }
+
+  .toolbar {
+    gap:6px;
+  }
+
+  .toolbar button {
+    flex: 1 1 auto;
+    padding: 9px 8px;
+  }
+
+  .editor-wrap,
+  #code-editor {
+    min-height: 65vh;
+  }
+}
