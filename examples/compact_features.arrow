@@ -1,0 +1,14 @@
+↑↑ suma(dane):
+    ↑↑↑ wynik = 0
+    ↓↓ liczba ∈ dane:
+        ↑↑↑ wynik = wynik + liczba
+    →→→ wynik
+
+↑↑↑ liczby = [2, 4, 6, 8]
+↑ "Suma:"
+↑ suma(liczby)
+
+↑↑↑ x = 0
+↓ x < 3:
+    ↑ x
+    ↑↑↑ x = x + 1
