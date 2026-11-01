@@ -27,6 +27,7 @@
         draw_text("Nacisnij R, aby zagrac ponownie", 105, 215, "white")
         →→→ True
 
+
     → key_pressed("UP") and game["direction"] != (0, 1):
         ↑↑↑ game["direction"] = (0, -1)
     → key_pressed("DOWN") and game["direction"] != (0, -1):
@@ -41,7 +42,6 @@
     ↑↑↑ head_y = snake[0][1] + game["direction"][1]
     ↑↑↑ head = (head_x, head_y)
 
-    # Kolizja ze sciana lub wlasnym cialem.
     → head_x < 0 or head_x >= 30 or head_y < 0 or head_y >= 20 or head in snake[1:]:
         ↑↑↑ game["over"] = True
         clear_screen()
