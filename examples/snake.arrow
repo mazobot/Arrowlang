@@ -1,5 +1,3 @@
-# SNAKE — gra napisana w ArrowLang 2.0
-# Sterowanie: strzalki. R = restart.
 
 ↑↑↑ game = {}
 
@@ -29,7 +27,6 @@
         draw_text("Nacisnij R, aby zagrac ponownie", 105, 215, "white")
         →→→ True
 
-    # Zmiana kierunku. Nie mozna zawrocic bezposrednio.
     → key_pressed("UP") and game["direction"] != (0, 1):
         ↑↑↑ game["direction"] = (0, -1)
     → key_pressed("DOWN") and game["direction"] != (0, -1):
@@ -61,7 +58,6 @@
     ←:
         snake.pop()
 
-    # Rysowanie planszy, wyniku, weza i jedzenia.
     clear_screen()
     draw_text("SCORE: " + str(game["score"]), 8, 5, "white")
 
